@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE empresa SYSTEM "dunder_mifflin.dtd">
+
+<empresa>
+    <departaments>
+        <departament id="d1"><nom>Vendes</nom></departament>
+        <departament id="d2"><nom>Magatzem</nom></departament>
+        <departament id="d3"><nom>Transport</nom></departament>
+    </departaments>
+
+    <empleats>
+        <empleat id="e1">
+            <nom>Michael</nom>
+            <cognom>Scott</cognom>
+            <departamentRef>d1</departamentRef>
+        </empleat>
+        <empleat id="e2">
+            <nom>Dwight</nom>
+            <cognom>Schrute</cognom>
+            <departamentRef>d1</departamentRef>
+        </empleat>
+        <empleat id="e3">
+            <nom>Darryl</nom>
+            <cognom>Philbin</cognom>
+            <departamentRef>d2</departamentRef>
+        </empleat>
+    </empleats>
+
+    <clients>
+        <client id="c1">
+            <nomEmpresa>Staples</nomEmpresa>
+            <venedorRef>e1</venedorRef>
+        </client>
+        <client id="c2">
+            <nomEmpresa>Office Depot</nomEmpresa>
+            <venedorRef>e2</venedorRef>
+        </client>
+        <client id="c3">
+            <nomEmpresa>PaperWorld</nomEmpresa>
+            <venedorRef>e1</venedorRef>
+        </client>
+    </clients>
+
+    <productes>
+        <producte id="p1"><nomProducte>Resma A4</nomProducte><preuUnitari>4.50</preuUnitari></producte>
+        <producte id="p2"><nomProducte>Clips</nomProducte><preuUnitari>1.20</preuUnitari></producte>
+        <producte id="p3"><nomProducte>Grapes</nomProducte><preuUnitari>2.10</preuUnitari></producte>
+    </productes>
+
+    <comandes>
+        <comanda id="o1">
+            <data>2024-10-21</data>
+            <clientRef>c1</clientRef>
+            <linies>
+                <linia><producteRef>p1</producteRef><quantitat>5</quantitat></linia>
+                <linia><producteRef>p2</producteRef><quantitat>10</quantitat></linia>
+            </linies>
+        </comanda>
+        <comanda id="o2">
+            <data>2024-10-22</data>
+            <clientRef>c2</clientRef>
+            <linies>
+                <linia><producteRef>p1</producteRef><quantitat>2</quantitat></linia>
+            </linies>
+        </comanda>
+        <comanda id="o3">
+            <data>2024-10-23</data>
+            <clientRef>c3</clientRef>
+            <linies>
+                <linia><producteRef>p3</producteRef><quantitat>7</quantitat></linia>
+            </linies>
+        </comanda>
+    </comandes>
+</empresa>
