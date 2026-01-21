@@ -1,0 +1,36 @@
+<!ELEMENT empresa (departaments, empleats, clients, productes, comandes)>
+
+<!ELEMENT departaments (departament+)>
+<!ELEMENT departament (nom)>
+<!ATTLIST departament id ID #REQUIRED>
+
+<!ELEMENT empleats (empleat+)>
+<!ELEMENT empleat (nom, cognom, departamentRef)>
+<!ATTLIST empleat id ID #REQUIRED>
+
+<!ELEMENT departamentRef (#PCDATA)>
+
+<!ELEMENT clients (client+)>
+<!ELEMENT client (nomEmpresa, venedorRef)>
+<!ATTLIST client id ID #REQUIRED>
+
+<!ELEMENT venedorRef (#PCDATA)>
+
+<!ELEMENT productes (producte+)>
+<!ELEMENT producte (nomProducte, preuUnitari)>
+<!ATTLIST producte id ID #REQUIRED>
+
+<!ELEMENT preuUnitari (#PCDATA)>
+
+<!ELEMENT comandes (comanda+)>
+<!ELEMENT comanda (data, clientRef, linies)>
+<!ATTLIST comanda id ID #REQUIRED>
+
+<!ELEMENT data (#PCDATA)>
+<!ELEMENT clientRef (#PCDATA)>
+
+<!ELEMENT linies (linia+)>
+<!ELEMENT linia (producteRef, quantitat)>
+
+<!ELEMENT producteRef (#PCDATA)>
+<!ELEMENT quantitat (#PCDATA)>
